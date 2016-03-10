@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html ng-app='GoldRushApp'>
 
-  <head>
-    <link rel="stylesheet" href="main.css"></link>
-    <title>Gold Rush, y'all!</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css"></link>
+  <title>Gold Rush, y'all!</title>
+</head>
 
-  <body ng-controller='markerController'>
+<body ng-controller='markerController' id="map" ng-click="getMarker()">
 
-    <div id="map" ng-click="">
-      <div>
-      </div>
-    </div>
-    <div class="">
-      <ul>
-        <li></li>
-      </ul>
-    </div>
+  <img class="marker" ng-repeat="marker in markerArr" src="http://icon-park.com/imagefiles/location_map_pin_red8.png" alt="" style="top:{{marker.y}}; left:{{marker.x}};" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
-    <script src="app.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
+  <script src="app.js"></script>
+</body>
 
 </html>
